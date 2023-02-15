@@ -44,7 +44,7 @@ public class QuoteService {
 
     public Quote getRandomQuote() {
         int quotesAmount = repo.getQuotesAmount();
-        return findById((int) ((Math.random() * (quotesAmount - 1)) + 1));
+        return findById((int) ((Math.random() * (quotesAmount - 1)) + 1)% quotesAmount);
     }
 
     public Quote updateQuote(Quote quote, int id) {
